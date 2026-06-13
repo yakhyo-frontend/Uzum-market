@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Uzum Market - Online Store</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container-head">
+      <div class="line container">
+        <div class="loc">
+          <img
+            width="20px"
+            src="./assets/map-pin-line.svg"
+            alt="Location Pin"
+          />
+          <p class="city">Shahar:</p>
+          <p class="city-1">Toshkent</p>
+        </div>
+
+        <p class="order">Buyurtmangizni 1 kunda yetkazib beramiz !</p>
+        <div class="last">
+          <p class="questions">Savol - Javoblar</p>
+          <p class="orders">Buyurtmalarim</p>
+
+          <div class="lang">
+            <img
+              class="lang-img"
+              src="./assets/translate-2.svg"
+              alt="Lang"
+              width="20px"
+            />
+            <p class="lang-p">O'zbekcha</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header-container container">
+        <img
+          src="./assets/div.middle-header-main-logo.png"
+          alt="Logo uzum market"
+        />
+        <div class="catalog">
+          <img width="20px" src="./assets/menu-search-line.svg" alt="Catalog" />
+          <h4 class="katalog">Katalog</h4>
+        </div>
+
+        <input
+          type="search"
+          class="input"
+          placeholder="Mahsulotlar va turkumlar izlash"
+        />
+        <button type="submit" class="btn-search">
+          <img width="20px" src="./assets/search-line.svg" alt="" />
+        </button>
+
+        <div class="actions">
+          <div class="action">
+            <img width="20px" src="./assets/user-line.svg" alt="User" />
+            <p class="action-text">Kirish</p>
+          </div>
+          <div class="action">
+            <img width="20px" src="./assets/heart-line.svg" alt="User" />
+            <p class="action-text">Saralangan</p>
+          </div>
+          <div class="action">
+            <img
+              width="20px"
+              src="./assets/shopping-bag-2-line.svg"
+              alt="User"
+            />
+            <p class="action-text">Savat</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper container">
+        <div class="main-wrapper">
+          <img src="./assets/div.image.png" alt="" />
+          <p class="wrapper-text">Muddatli to'lov</p>
+        </div>
+        <p class="wrapper-text-2">Elektronika</p>
+        <p class="wrapper-text-2">Maishiy texnika</p>
+        <p class="wrapper-text-2">Kiyim</p>
+        <p class="wrapper-text-2">Poyabzal</p>
+        <p class="wrapper-text-2">Aksessuarlar</p>
+        <p class="wrapper-text-2">Go'zallik va parvarish</p>
+        <p class="wrapper-text-2">Salomatlik</p>
+        <p class="wrapper-text-2">Uy ro'zg'or buyumlari</p>
+        <p class="wrapper-text-2">Qurilish va taminlash</p>
+      </div>
+
+      <section class="slider container">
+        <div class="slider container">
+          <img
+            class="slide active container"
+            src="./assets/Gemini_Generated_Image_5b55z95b55z95b55.png"
+            alt="Слайд 1"
+          />
+          <img
+            class="slide container"
+            src="./assets/Gemini_Generated_Image_5b55z95b55z95b55 (1).png"
+            alt="Слайд 2"
+          />
+          <img
+            class="slide container"
+            src="./assets/Gemini_Generated_Image_5b55z95b55z95b55 (2).png"
+            alt="Слайд 3"
+          />
+
+          <button class="prev-btn" onclick="prevSlide()"><</button>
+          <button class="next-btn" onclick="nextSlide()">></button>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <h1 class="cards-title container">Arzon narxlar ></h1>
+        <div class="cards-container container">
+          <div class="cards"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <ul class="footer-list">
+          <div class="footer-start">
+            <li class="footer-item">
+              <a href="#" class="footer-link">
+                <span>Biz haqimizda</span>
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Topshirish punktlari</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Vakansiyalar</a>
+            </li>
+          </div>
+          <div class="footer-second">
+            <li class="footer-item">
+              <a href="#" class="footer-link">
+                <span>Foydalanuvchilarga</span>
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Biz bilan bog'lanish</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Savol - Javob</a>
+            </li>
+          </div>
+          <div class="footer-third">
+            <li class="footer-item">
+              <a href="#" class="footer-link">
+                <span>Tadbirkorlarga</span>
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Uzumda soting</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Sotuvchi kabinetiga kirish</a>
+            </li>
+          </div>
+          <div class="column">
+            <div class="socials">
+              <li class="footer-item">
+                <a href="#" class="footer-link">
+                  <span>Uzum ijtimoiy tarmoqlarda</span>
+                </a>
+              </li>
+              <img src="./assets/div.social.png" width="200px" alt="" />
+            </div>
+          </div>
+        </ul>
+        <p class="footer-bottom">
+          «2024© XK MCHJ «UZUM MARKET». STIR 309376127. Barcha huquqlar
+          himoyalangan»
+        </p>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
