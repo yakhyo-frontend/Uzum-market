@@ -100,7 +100,7 @@ li {
 }
 
 .catalog:hover {
-  color: white;
+  color: rgb(225, 225, 255);
   background-color: #7000ff;
   transition: all 0.5s ease;
 }
@@ -217,6 +217,17 @@ li {
   height: 50px;
   left: -200px;
   border-radius: 50%;
+}
+
+.footer-texts {
+  display: flex;
+  position: absolute;
+  bottom: -40px;
+}
+
+.footer-text {
+  font-weight: 600;
+  margin: 0 10px 0 0;
 }
 
 .next-btn {
