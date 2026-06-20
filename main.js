@@ -1,5 +1,4 @@
 // Slides
-
 const slides = document.querySelectorAll(".slide");
 let currentIndex = 0;
 
@@ -34,16 +33,25 @@ const cardsDiv2 = document.querySelector(".cards-2");
 const cardsDiv3 = document.querySelector(".cards-3");
 
 const getProducts1 = () => {
+  const loaderEl = cardsDiv1.parentElement.querySelector(".loader");
+  if (loaderEl) loaderEl.style.display = "flex";
+
   fetch(`https://fakestoreapi.com/products/?limit=8`)
     .then((res) => res.json())
     .then((data) => {
       showProducts1(data);
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      cardsDiv1.innerHTML =
+        "<p style='text-align:center; width:100%;'>Xatolik yuz berdi. Yuklab bo'lmadi.</p>";
+    })
+    .finally(() => {
+      if (loaderEl) loaderEl.style.display = "none";
+    });
 };
 
 function showProducts1(data) {
-  cardsDiv1.innerHTML = "";
   data.forEach((element) => {
     const { image, price, description, rating } = element;
     cardsDiv1.innerHTML += `
@@ -64,12 +72,22 @@ function showProducts1(data) {
 }
 
 const getProducts2 = () => {
+  const loaderEl = cardsDiv2.parentElement.querySelector(".loader");
+  if (loaderEl) loaderEl.style.display = "flex";
+
   fetch(`https://fakestoreapi.com/products/?limit=16`)
     .then((res) => res.json())
     .then((data) => {
       showProducts2(data);
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      cardsDiv2.innerHTML =
+        "<p style='text-align:center; width:100%;'>Xatolik yuz berdi. Yuklab bo'lmadi.</p>";
+    })
+    .finally(() => {
+      if (loaderEl) loaderEl.style.display = "none";
+    });
 };
 
 function showProducts2(data) {
@@ -97,12 +115,22 @@ function showProducts2(data) {
 }
 
 const getProducts3 = () => {
+  const loaderEl = cardsDiv3.parentElement.querySelector(".loader");
+  if (loaderEl) loaderEl.style.display = "flex";
+
   fetch(`https://fakestoreapi.com/products/?limit=20`)
     .then((res) => res.json())
     .then((data) => {
       showProducts3(data);
     })
-    .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      cardsDiv3.innerHTML =
+        "<p style='text-align:center; width:100%;'>Xatolik yuz berdi. Yuklab bo'lmadi.</p>";
+    })
+    .finally(() => {
+      if (loaderEl) loaderEl.style.display = "none";
+    });
 };
 
 function showProducts3(data) {
