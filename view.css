@@ -163,205 +163,8 @@ li {
   margin: 0 5px;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-.main-wrapper {
-  display: flex;
-}
-
-.main-wrapper img {
-  margin: -3px 5px;
-}
-
-.wrapper-text-2 {
-  cursor: pointer;
-  color: #595b66;
-  transition: all 0.5s ease;
-}
-.wrapper-text-2:hover {
-  color: black;
-  transition: all 0.5s ease;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.slide {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-
-.slide.active {
-  display: block;
-}
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.prev-btn {
-  width: 50px;
-  height: 50px;
-  left: -200px;
-  border-radius: 50%;
-}
-
-.footer-texts {
-  display: flex;
-  position: absolute;
-  bottom: -40px;
-}
-
-.footer-text {
-  font-weight: 600;
-  margin: 0 10px 0 0;
-}
-
-.next-btn {
-  width: 50px;
-  height: 50px;
-  right: -200px;
-  border-radius: 50%;
-}
-
-.slide {
-  position: relative;
-  left: -210px;
-  width: 1220px;
-  height: 600px;
-  margin: 30px auto;
-  border-radius: 10px;
-}
-
-.cards-container {
-  display: flex;
-  align-items: start;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin: 30px auto;
-}
-
-.cards-title {
-  margin-top: 60px;
-}
-
-.cards {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.price-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.heart-card {
-  position: absolute;
-  left: 220px;
-  top: 10px;
-  transform: scale(1.7);
-  cursor: pointer;
-}
-
-.add {
-  cursor: pointer;
-  position: relative;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  border: 2px solid black;
-  right: -120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  position: relative;
-  width: 230px;
-  height: 400px;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  margin: 20px 30px;
-}
-
-.card img:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
-.view-btn {
-  font-weight: 500;
-  width: 60px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: #7000ff;
-  color: white;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.view-btn:hover {
-  background-color: rgb(225, 225, 255);
-  color: #7000ff;
-  transition: all 0.5s ease;
-}
-
-.card-img {
-  transition: all 0.5s ease;
-}
-
-.wrapper-card {
-  background-color: whitesmoke;
-  width: 250px;
-  border-radius: 10px;
-}
-
-.description {
-  width: 230px;
-  height: 30px;
-  font-size: 15px;
-  margin: 10px 0;
-}
-
-.card img {
-  object-fit: contain;
-  margin: 0 25px;
-  width: 200px;
-  height: 300px;
-}
-
-.rating {
-  margin-top: 15px;
-  color: grey;
-}
-
-.price {
-  margin-top: 5px;
-}
-
 body {
-  animation: ease 1s fadeInUp;
+  animation: fadeInUp 1s ease;
 }
 
 .footer-container {
@@ -482,4 +285,81 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.detail-wrapper {
+  width: 1220px;
+  margin: 40px auto 80px;
+  padding: 20px;
+}
+
+.detail-card {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.detail-image {
+  width: 300px;
+  height: 400px;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.detail-info {
+  max-width: 560px;
+}
+
+.detail-title {
+  font-size: 32px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.detail-price {
+  font-size: 28px;
+  color: #7000ff;
+  margin-bottom: 16px;
+}
+
+.detail-rating {
+  color: #5f5f6d;
+  margin-bottom: 22px;
+}
+
+.detail-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 28px;
+}
+
+.back-btn {
+  font-weight: 500;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #7000ff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.back-btn:hover {
+  background-color: rgb(225, 225, 255);
+  color: #7000ff;
+  transition: all 0.5s ease;
+}
+
+.error-message {
+  color: #d60000;
+  font-size: 18px;
+  text-align: center;
+  padding: 50px 0;
 }

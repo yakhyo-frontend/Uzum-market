@@ -53,7 +53,7 @@ const getProducts1 = () => {
 
 function showProducts1(data) {
   data.forEach((element) => {
-    const { image, price, description, rating } = element;
+    const { id, image, price, description, rating } = element;
     cardsDiv1.innerHTML += `
         <div class="card">
           <div class="wrapper-card">
@@ -65,6 +65,7 @@ function showProducts1(data) {
           <div class="price-box">
             <h3 class="price">${price} so'm</h3>
             <h3 class="add">+</h3>
+            <button class="view-btn" onclick="viewProduct(${id})">View</button>
           </div>
         </div>
     `;
@@ -96,7 +97,7 @@ function showProducts2(data) {
   data.forEach((element, index) => {
     if (index < 8) return;
 
-    const { image, price, description, rating } = element;
+    const { id, image, price, description, rating } = element;
     cardsDiv2.innerHTML += `
         <div class="card">
           <div class="wrapper-card">
@@ -108,6 +109,7 @@ function showProducts2(data) {
           <div class="price-box">
             <h3 class="price">${price} so'm</h3>
             <h3 class="add">+</h3>
+            <button class="view-btn" onclick="viewProduct(${id})">View</button>
           </div>
         </div>
     `;
@@ -139,7 +141,7 @@ function showProducts3(data) {
   data.forEach((element, index) => {
     if (index < 16) return;
 
-    const { image, price, description, rating } = element;
+    const { id, image, price, description, rating } = element;
     cardsDiv3.innerHTML += `
         <div class="card">
           <div class="wrapper-card">
@@ -151,6 +153,7 @@ function showProducts3(data) {
           <div class="price-box">
             <h3 class="price">${price} so'm</h3>
             <h3 class="add">+</h3>
+            <button class="view-btn" onclick="viewProduct(${id})">View</button>
           </div>
         </div>
     `;
@@ -160,3 +163,8 @@ function showProducts3(data) {
 getProducts1();
 getProducts2();
 getProducts3();
+
+function viewProduct(id) {
+  if (!id) return;
+  window.location.href = `view.html?id=${id}`;
+}
